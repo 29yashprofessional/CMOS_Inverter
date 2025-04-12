@@ -40,21 +40,32 @@ DC analysis for a CMOS inverter is a simulation used to determine the output vol
 
 VOH is measured at the minimum value of VIN(VOL) i.e 0, VOL is calculated at input voltage maximum value of VIN( VOH or VDD) i.e 1.8V, VIH are calculated by finding points at VTC where derivative of VOUT wrt VIN = -1, the smaller value being VIL and higher being VIH, for them, we use the calculator functionality
 of ADE L to plot deriv(VS("/vout")).
-Calculation of VOH
+Calculation of VOH:
 
 ![VOH_calculation](https://github.com/user-attachments/assets/b4a4ab5f-2b7d-459d-b043-a25a208624aa)
 
 It can be inferred that VOH = 1.8V from the above figure.
-Calculation of VOL
+
+Calculation of VOL:
 
 ![VOL_calculation](https://github.com/user-attachments/assets/17fb4b24-7a01-4b3d-ad8d-4816536bf979)
 
 It can be inferred that VOL = 0V from the above figure.
-Calculation of VIH and VIL
+
+Calculation of VIH and VIL:
 
 ![VIH_and_VIL_calculation](https://github.com/user-attachments/assets/2617035d-9127-4ec2-b59f-ed8530c81a90)
 
 From the above figure, it can be noted that VIL = 0.388V and VIH = 0.869V.
+
+Calculation of VTH:
+
+![VTH_calculation](https://github.com/user-attachments/assets/51206d9c-84cb-4061-aa5c-a8700ecabaa9)
+
+It can be noted that VTH = 0.7V from the above figure.
+
+
+
 
 
 
