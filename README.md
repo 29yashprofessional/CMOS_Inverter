@@ -1,5 +1,6 @@
 # CMOS_Inverter
 This project aims at designing and analyzing a CMOS Inverter using GPDK90 90nm technology using Cadence Virtuoso and then comparing pre layout and post layout designs using Transient and DC analyses. It contains:
+* Introduction
 * Pre layout analysis using schematic
   * Pre layout DC analysis
   * Pre layout Transient analysis
@@ -35,9 +36,28 @@ DC analysis for a CMOS inverter is a simulation used to determine the output vol
 * VOL (Output Low Voltage): Maximum voltage the output reaches when representing logic 0.
 * VIH (Input High Voltage): Minimum input voltage recognized as logic 1.
 * VIL (Input Low Voltage): Maximum input voltage recognized as logic 0.
+* VTH (Threshold Voltage): Input voltage at which the output voltage of a CMOS inverter is equal to the input voltage (Vin = Vout). It marks the switching threshold of the inverter.
 
 VOH is measured at the minimum value of VIN(VOL) i.e 0, VOL is calculated at input voltage maximum value of VIN( VOH or VDD) i.e 1.8V, VIH are calculated by finding points at VTC where derivative of VOUT wrt VIN = -1, the smaller value being VIL and higher being VIH, for them, we use the calculator functionality
 of ADE L to plot deriv(VS("/vout")).
+Calculation of VOH
+
+![VOH_calculation](https://github.com/user-attachments/assets/b4a4ab5f-2b7d-459d-b043-a25a208624aa)
+
+It can be inferred that VOH = 1.8V from the above figure.
+Calculation of VOL
+
+![VOL_calculation](https://github.com/user-attachments/assets/17fb4b24-7a01-4b3d-ad8d-4816536bf979)
+
+It can be inferred that VOL = 0V from the above figure.
+Calculation of VIH and VIL
+
+![VIH_and_VIL_calculation](https://github.com/user-attachments/assets/2617035d-9127-4ec2-b59f-ed8530c81a90)
+
+From the above figure, it can be noted that VIL = 0.388V and VIH = 0.869V.
+
+
+
 
 
 
