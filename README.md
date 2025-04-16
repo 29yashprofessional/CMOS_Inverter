@@ -42,7 +42,8 @@ DC analysis for a CMOS inverter is a simulation used to determine the output vol
 
 To perform DC analysis we have to first create a testbench or simulation setup on which we will provide input waveforms and measure output waveform.
 
-![Pre_test_bench](https://github.com/user-attachments/assets/afec9ac7-4b91-42d1-ae8d-458cfccc13ef)
+![Test_bench](https://github.com/user-attachments/assets/65db124c-57c0-4b07-b817-628a85235597)
+
 
 Here, VIN is a pulse voltage with the following parameters:
 V1=OV, V2=1.8V, Period=40ns, Delay time=0ns, Fall time=1ns, Rise time=1ns and Pulse width=20ns.
@@ -106,11 +107,23 @@ Calculation of Tphl:
 ![Prelayout_Tphl](https://github.com/user-attachments/assets/93440cbc-d3b7-4edc-a9ca-2bed0999575a)
 
 From the above figure, Tphl= 27.80ps.
-Propagation delay= (Tplh+Tphl)/2 = 167.08ps.
+Propagation delay,Tp= (Tplh+Tphl)/2 = 167.08ps.
 
 ### Static and Dynamic power dissipation
 Static power disisipation refers to the power dissipated when the state of the CMOS inverter is not changing. It occurs primarily due to leakage currents.
 Dynamic power dissipation refers to the power dissipated when the state of the CMOS inverter is changing. It occurs to the charging and dischanrging of capacitive loads. 
+
+![Pre_power_dissipation](https://github.com/user-attachments/assets/8d7398d6-3c24-4d91-9a2d-0a92015e4507)
+
+There are 2 values of static power dissipation because one of them is for the HIGH state while the other is for LOW state, higher one being for the HIGH state. Similarly, there are 2 different values for dynamic power dissipation because they represent different transitions, one representing shift of state from HIGH to LOW while the other representing change of state from LOW to HIGH, higher one being for the HIGH to LOW transition. The values for dissipation are calculated by taking the average of the two values.
+
+Static power dissipation = (4.03705 + 481.9898) nW / 2 = 243.01 nW
+Dynamic power dissipation = (79.38654 + 94.22233) μW / 2 = 86.80 μW
+
+
+
+
+
 
 
 
