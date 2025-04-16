@@ -78,7 +78,7 @@ Calculation of VTH:
 ![VTH_calculation](https://github.com/user-attachments/assets/51206d9c-84cb-4061-aa5c-a8700ecabaa9)
 
 It can be noted that VTH = 0.7V from the above figure.
-### Calculation of noise margin
+### Calculation of Noise Margins
 NML = VIL - VOL = 388.255mV
 
 NMH = VOH - VIH = 925.72mV
@@ -395,11 +395,38 @@ Calculation of VOH:
 
 ![Post_VOH_calculation](https://github.com/user-attachments/assets/5db78222-16a5-4d91-b004-6db6fd2047fe)
 
-From the above figure, VOH = 1.7982V.
+From the figure above, VOH = 1.7982V.
 
 Calculation of VOL:
 
 ![Post_VOL_calculation](https://github.com/user-attachments/assets/b42ef26a-c4e9-45b4-b4e9-d52d75cb9dfd)
+
+From the figure above, VOL = 14.892uV.
+
+Calculation of VIL and VIH:
+
+![Post_VIL_and_VIH_calculation](https://github.com/user-attachments/assets/3077d2b9-48bf-4556-85c6-fb90897be30a)
+
+It can be inferred that VIL = 398.944mV and VIH = 885.437mV from the figure above.
+
+Calculation of VTH:
+
+![Post_VTH_calculation](https://github.com/user-attachments/assets/4cfdd3e2-a44d-43bb-9a9a-a526cbcf2292)
+
+VTH = 700mV as inferred from the figure above.
+
+### Calculation of Noise Margins
+
+NML = VIL - VOL = 398.929mV
+
+NMH = VOH - VIH = 912.763mV
+
+## Post layout transient analysis
+
+Post layout transient analysis simulates the time-dependent behavior of the CMOS inverter using the extracted layout. It applies a time-varying input and observes how the output voltage responds to it. It captures the dynamic performance of the circuit. The output of transient analysis is as shown below:
+
+![Postlayout_transient](https://github.com/user-attachments/assets/892746de-02ed-42b0-85c9-4319f44c09aa)
+
 
 
 
