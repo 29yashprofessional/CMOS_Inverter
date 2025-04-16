@@ -93,7 +93,29 @@ To perform transient analysis we have to go to **Launch -> ADE L ->tran** ,here 
 ![Prelayout_transient](https://github.com/user-attachments/assets/9e9d0234-7a1d-4f44-9340-a7bb8aa45126)
 
 ### Calculation of Propagation delay
-Propagation delay is the time it takes for the output of a CMOS inverter to respond to a change in the input signal. It is of 2 types, first being when the input changes changes from high to low and output changes from low to high(Tplh) and the other when the input changes from low to high and  
+Propagation delay is the time it takes for the output of a CMOS inverter to respond to a change in the input signal. It is of 2 types, first being when the input changes changes from high to low and output changes from low to high(Tplh) and the other when input changes from low to high and output changes from high to low(Tphl). The average of the two is termed as the propagation delay. 50% voltage is generally taken as the threshold to calculate propagation delay. 
+
+Calculation of Tplh:
+
+![Prelayout_Tplh](https://github.com/user-attachments/assets/b7f66b72-7c16-4e6b-9b3a-910233d8b0a1)
+
+From the above figure, Tplh(given by dx in the image)= 306.36ps.
+
+Calculation of Tphl:
+
+![Prelayout_Tphl](https://github.com/user-attachments/assets/93440cbc-d3b7-4edc-a9ca-2bed0999575a)
+
+From the above figure, Tphl= 27.80ps.
+Propagation delay= (Tplh+Tphl)/2 = 167.08ps.
+
+### Static and Dynamic power dissipation
+Static power disisipation refers to the power dissipated when the state of the CMOS inverter is not changing. It occurs primarily due to leakage currents.
+Dynamic power dissipation refers to the power dissipated when the state of the CMOS inverter is changing. It occurs to the charging and dischanrging of capacitive loads. 
+
+
+
+
+
 
 
 
