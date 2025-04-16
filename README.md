@@ -379,6 +379,33 @@ Now, LVS check is performed to ensure that the layout is identical to the schema
 
 The result of LVS check is as shown below:
 
+![Assura_match](https://github.com/user-attachments/assets/f34f1626-d7b3-4f28-b6b0-fc3c3828b9d7)
+
+To perform the Post layout analysis, the extracted view of the layout is generated that includes circuit connectivity alongwith parasitic components such as parasitic resistances and capacitances extracted from the physical layout. It is used for post layout simulations to ensure that the real-world implementation behaves as expected. To generate extracted view go to **Assura->Run RCX**. The extracted view is as follows:
+
+![Layout_extracted](https://github.com/user-attachments/assets/bff04482-d858-46ff-9515-f811f5c75c08)
+
+## Post layout DC analysis
+
+Post layout DC analysis helps plot the VTC curve while considering parasitic components i.e in a non-ideal environment.
+
+![Postlayout_dc](https://github.com/user-attachments/assets/ce829565-3975-42c3-80ae-bb7e2541d05d)
+
+Calculation of VOH:
+
+![Post_VOH_calculation](https://github.com/user-attachments/assets/5db78222-16a5-4d91-b004-6db6fd2047fe)
+
+From the above figure, VOH = 1.7982V.
+
+Calculation of VOL:
+
+![Post_VOL_calculation](https://github.com/user-attachments/assets/b42ef26a-c4e9-45b4-b4e9-d52d75cb9dfd)
+
+
+
+
+
+
 
 
 
