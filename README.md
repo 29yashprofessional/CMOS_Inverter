@@ -441,7 +441,7 @@ Calculation of Tphl:
 
 Tphl = 32.306ps, as inferred from the above figure.
 
-Propagation delay, Tp = Tp = (Tplh + Tphl) / 2 = 171.767 ps.
+Propagation delay, Tp = (Tplh + Tphl) / 2 = 171.767 ps.
 
 ### Calculation of Static and Dynamic power dissipation
 
