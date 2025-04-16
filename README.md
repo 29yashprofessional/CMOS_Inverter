@@ -109,7 +109,7 @@ Calculation of Tphl:
 From the above figure, Tphl= 27.80ps.
 Propagation delay,Tp= (Tplh+Tphl)/2 = 167.08ps.
 
-### Static and Dynamic power dissipation
+### Calculation of Static and Dynamic power dissipation
 Static power disisipation refers to the power dissipated when the state of the CMOS inverter is not changing. It occurs primarily due to leakage currents.
 Dynamic power dissipation refers to the power dissipated when the state of the CMOS inverter is changing. It occurs to the charging and dischanrging of capacitive loads. 
 
@@ -117,8 +117,8 @@ Dynamic power dissipation refers to the power dissipated when the state of the C
 
 There are 2 values of static power dissipation because one of them is for the HIGH state while the other is for LOW state, higher one being for the HIGH state. Similarly, there are 2 different values for dynamic power dissipation because they represent different transitions, one representing shift of state from HIGH to LOW while the other representing change of state from LOW to HIGH, higher one being for the HIGH to LOW transition. The values for dissipation are calculated by taking the average of the two values.
 
-Static power dissipation = (4.03705 + 481.9898) nW / 2 = 243.01 nW
-Dynamic power dissipation = (79.38654 + 94.22233) μW / 2 = 86.80 μW
+Average Static power dissipation = (4.03705 + 481.9898) nW / 2 = 243.01 nW
+Average Dynamic power dissipation = (79.38654 + 94.22233) μW / 2 = 86.80 μW
 
 ## Pre layout netlist
 ```
@@ -427,6 +427,31 @@ Post layout transient analysis simulates the time-dependent behavior of the CMOS
 
 ![Postlayout_transient](https://github.com/user-attachments/assets/892746de-02ed-42b0-85c9-4319f44c09aa)
 
+### Calculation of Propagation delay
+
+Calculation of Tplh:
+
+![Postlayout_Tplh](https://github.com/user-attachments/assets/240f3c79-930e-4990-9ba6-0fe04a30ef66)
+
+From the figure above, Tplh = 311.228ps.
+
+Calculation of Tphl:
+
+![Postlayout_Tphl](https://github.com/user-attachments/assets/94e41c90-d049-4a45-8f24-42703038ca89)
+
+Tphl = 32.306ps, as inferred from the above figure.
+
+Propagation delay, Tp = Tp = (Tplh + Tphl) / 2 = 171.767 ps.
+
+### Calculation of Static and Dynamic power dissipation
+
+Just like pre-layout calculation, we would have 2 values of static power dissipation due to existence of 2 states, HIGH and LOW. Similarly, 2 values of dynamic power dissipation are present due to 2 different types of possible state transitions, HIGH to LOW and LOW to HIGH.
+
+![Post_power_dissipation](https://github.com/user-attachments/assets/24f6c607-ddfb-454b-8d4f-2590eb5d980f)
+
+Average Static power disspation = (4.04 + 481.99) nW/ 2 = 243.015 nW
+
+Average Dynamic power dissipation = (79.39 + 94.22) / 2 = 86.805 μW
 
 
 
