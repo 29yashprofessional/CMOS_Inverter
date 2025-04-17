@@ -104,7 +104,8 @@ From the above figure, Tplh(given by dx in the image)= 306.36ps.
 
 Calculation of Tphl:
 
-![Prelayout_Tphl](https://github.com/user-attachments/assets/93440cbc-d3b7-4edc-a9ca-2bed0999575a)
+![Prelayout_Tphl](https://github.com/user-attachments/assets/bc8a5107-cdb3-4698-bb8e-007444194f0a)
+
 
 From the above figure, Tphl= 27.80ps.
 Propagation delay,Tp= (Tplh+Tphl)/2 = 167.08ps.
