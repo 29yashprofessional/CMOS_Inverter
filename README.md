@@ -98,7 +98,8 @@ Propagation delay is the time it takes for the output of a CMOS inverter to resp
 
 Calculation of Tplh:
 
-![Prelayout_Tplh](https://github.com/user-attachments/assets/b7f66b72-7c16-4e6b-9b3a-910233d8b0a1)
+![Prelayout_Tplh](https://github.com/user-attachments/assets/2eb705c1-46d4-4798-ab76-34f08563fd25)
+
 
 From the above figure, Tplh(given by dx in the image)= 306.36ps.
 
@@ -108,6 +109,7 @@ Calculation of Tphl:
 
 
 From the above figure, Tphl= 27.80ps.
+
 Propagation delay,Tp= (Tplh+Tphl)/2 = 167.08ps.
 
 ### Calculation of Static and Dynamic power dissipation
