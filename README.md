@@ -120,8 +120,9 @@ Dynamic power dissipation refers to the power dissipated when the state of the C
 
 There are 2 values of static power dissipation because one of them is for the HIGH state while the other is for LOW state, higher one being for the HIGH state. Similarly, there are 2 different values for dynamic power dissipation because they represent different transitions, one representing shift of state from HIGH to LOW while the other representing change of state from LOW to HIGH, higher one being for the HIGH to LOW transition. The values for dissipation are calculated by taking the average of the two values.
 
-Average Static power dissipation = (4.03705 + 481.9898) nW / 2 = 243.01 nW
-Average Dynamic power dissipation = (79.38654 + 94.22233) μW / 2 = 86.80 μW
+Average Static power dissipation = (4.03705 + 481.9898) nW / 2 = 243.01 nW.
+
+Average Dynamic power dissipation = (79.38654 + 94.22233) μW / 2 = 86.80 μW.
 
 ## Pre layout netlist
 ```
@@ -456,7 +457,254 @@ Average Static power disspation = (4.04 + 481.99) nW/ 2 = 243.015 nW
 
 Average Dynamic power dissipation = (79.39 + 94.22) / 2 = 86.805 μW
 
+## Post layout netlist
+```
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 12.1.0.347.isr3 32bit -- 10 Jan 2013
+Copyright (C) 1989-2012 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence, Virtuoso and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
 
+Protected by U.S. Patents: 
+        5,610,847; 5,790,436; 5,812,431; 5,859,785; 5,949,992; 5,987,238; 
+        6,088,523; 6,101,323; 6,151,698; 6,181,754; 6,260,176; 6,278,964; 
+        6,349,272; 6,374,390; 6,493,849; 6,504,885; 6,618,837; 6,636,839; 
+        6,778,025; 6,832,358; 6,851,097; 6,928,626; 7,024,652; 7,035,782; 
+        7,085,700; 7,143,021; 7,493,240; 7,571,401.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: buet   Host: cadence   HostID: 7F0100   PID: 6890
+Memory  available: 2.8336 GB  physical: 4.1155 GB
+CPU Type: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz
+          Processor PhysicalID CoreID Frequency
+              0         0        0     2112.0
+              1         0        1     2112.0
+              2         1        0     2112.0
+              3         1        1     2112.0
+              4         2        0     2112.0
+              5         2        1     2112.0
+              6         3        0     2112.0
+              7         3        1     2112.0
+
+
+Simulating `input.scs' on cadence at 6:00:43 PM, Wed Apr 16, 2025 (process id: 6890).
+Current working directory: /home/buet/simulation/inverter_tb/spectre/config/netlist.
+Command line:
+    /home/buet/cadence/MMSIM121/tools.lnx86/spectre/bin/32bit/spectre  \
+        input.scs +escchars +log ../psf/spectre.out +inter=mpsc  \
+        +mpssession=spectre0_6676_1 -format psfxl -raw ../psf  \
+        +lqtimeout 900 -maxw 5 -maxn 5
+spectre pid = 6890
+
+Loading /home/buet/cadence/MMSIM121/tools.lnx86/cmi/lib/5.0/libinfineon_sh.so ...
+Loading /home/buet/cadence/MMSIM121/tools.lnx86/cmi/lib/5.0/libphilips_o_sh.so ...
+Loading /home/buet/cadence/MMSIM121/tools.lnx86/cmi/lib/5.0/libphilips_sh.so ...
+Loading /home/buet/cadence/MMSIM121/tools.lnx86/cmi/lib/5.0/libsparam_sh.so ...
+Loading /home/buet/cadence/MMSIM121/tools.lnx86/cmi/lib/5.0/libstmodels_sh.so ...
+Reading file:  /home/buet/simulation/inverter_tb/spectre/config/netlist/input.scs
+Reading file:  /home/buet/cadence/gpdk090_v4.6/models/spectre/gpdk090.scs
+Reading file:  /home/buet/cadence/gpdk090_v4.6/models/spectre/gpdk090_mos.scs
+Reading file:  /home/buet/cadence/gpdk090_v4.6/models/spectre/gpdk090_mos_iso.scs
+Reading file:  /home/buet/cadence/gpdk090_v4.6/models/spectre/gpdk090_resistor.scs
+Reading file:  /home/buet/cadence/gpdk090_v4.6/models/spectre/resd_va.va
+Reading link:  /home/buet/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/discipline.h
+Reading file:  /home/buet/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/disciplines.vams
+Reading link:  /home/buet/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/constants.h
+Reading file:  /home/buet/cadence/MMSIM121/tools.lnx86/spectre/etc/ahdl/constants.vams
+Reading file:  /home/buet/cadence/gpdk090_v4.6/models/spectre/rnoise_va.va
+Reading file:  /home/buet/cadence/gpdk090_v4.6/models/spectre/gpdk090_capacitor.scs
+Reading file:  /home/buet/cadence/gpdk090_v4.6/models/spectre/gpdk090_diode.scs
+Reading file:  /home/buet/cadence/gpdk090_v4.6/models/spectre/gpdk090_bipolar.scs
+
+Time for NDB Parsing: CPU = 967.852 ms, elapsed = 915.443 ms.
+Time accumulated: CPU = 967.852 ms, elapsed = 915.443 ms.
+Peak resident memory used = 32.2 Mbytes.
+
+
+Time for Elaboration: CPU = 38.994 ms, elapsed = 39.0639 ms.
+Time accumulated: CPU = 1.01084 s, elapsed = 954.982 ms.
+Peak resident memory used = 34.8 Mbytes.
+
+
+Time for EDB Visiting: CPU = 1 ms, elapsed = 1.95217 ms.
+Time accumulated: CPU = 1.01284 s, elapsed = 957.312 ms.
+Peak resident memory used = 35.1 Mbytes.
+
+
+Warning from spectre during initial setup.
+    WARNING (CMI-2477): I0.PM0: `Rds' = 70.9091 uOhm is less than 0.001. Set to 0.
+
+
+Circuit inventory:
+              nodes 20
+            bsim3v3 2     
+          capacitor 15    
+           resistor 17    
+            vsource 2     
+
+
+Warning from spectre during initial setup.
+    WARNING (CMI-2477): I0.PM0: `Rds' = 70.9091 uOhm is less than 0.001. Set to 0.
+
+
+Time for parsing: CPU = 4.999 ms, elapsed = 5.21493 ms.
+Time accumulated: CPU = 1.01884 s, elapsed = 962.916 ms.
+Peak resident memory used = 35.9 Mbytes.
+
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_6676_1, ).
+
+Warning from spectre.
+    WARNING (SPECTRE-16707): Only tran supports psfxl format, result of other analyses will be in psfbin format.
+
+
+*************************************************
+Transient Analysis `tran': time = (0 s -> 160 ns)
+*************************************************
+DC simulation time: CPU = 0 s, elapsed = 1.46198 ms.
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 160 ns
+    step = 160 ps
+    maxstep = 3.2 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 5.063 ns    (3.16 %), step = 2.025 ns     (1.27 %)
+    tran: time = 14.66 ns    (9.16 %), step = 3.2 ns          (2 %)
+    tran: time = 21 ns       (13.1 %), step = 3.137 ns     (1.96 %)
+    tran: time = 30.41 ns      (19 %), step = 3.2 ns          (2 %)
+    tran: time = 36.81 ns      (23 %), step = 3.2 ns          (2 %)
+    tran: time = 44.24 ns    (27.7 %), step = 1.611 ns     (1.01 %)
+    tran: time = 53.84 ns    (33.7 %), step = 3.2 ns          (2 %)
+    tran: time = 61 ns       (38.1 %), step = 1.979 ns     (1.24 %)
+    tran: time = 70.3 ns     (43.9 %), step = 3.2 ns          (2 %)
+    tran: time = 76.7 ns     (47.9 %), step = 3.2 ns          (2 %)
+    tran: time = 84.24 ns    (52.7 %), step = 1.611 ns     (1.01 %)
+    tran: time = 93.84 ns    (58.7 %), step = 3.2 ns          (2 %)
+    tran: time = 101 ns      (63.1 %), step = 1.979 ns     (1.24 %)
+    tran: time = 110.3 ns    (68.9 %), step = 3.2 ns          (2 %)
+    tran: time = 116.7 ns    (72.9 %), step = 3.2 ns          (2 %)
+    tran: time = 124.2 ns    (77.7 %), step = 1.611 ns     (1.01 %)
+    tran: time = 133.8 ns    (83.7 %), step = 3.2 ns          (2 %)
+    tran: time = 141 ns      (88.1 %), step = 1.979 ns     (1.24 %)
+    tran: time = 150.3 ns    (93.9 %), step = 3.2 ns          (2 %)
+    tran: time = 156.7 ns    (97.9 %), step = 3.2 ns          (2 %)
+Number of accepted tran steps =             273
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 0 s, elapsed = 1.54901 ms.
+Intrinsic tran analysis time:    CPU = 56.991 ms, elapsed = 178.7 ms.
+Total time required for tran analysis `tran': CPU = 56.991 ms, elapsed = 184.411 ms.
+Time accumulated: CPU = 1.10883 s, elapsed = 1.31698 s.
+Peak resident memory used = 37.8 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+
+******************
+DC Analysis `dcOp'
+******************
+Important parameter values:
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    gmindc = 1 pS
+Convergence achieved in 6 iterations.
+Total time required for dc analysis `dcOp': CPU = 44.993 ms, elapsed = 17.1452 ms.
+Time accumulated: CPU = 1.16982 s, elapsed = 1.37348 s.
+Peak resident memory used = 37.8 Mbytes.
+
+dcOpInfo: writing operating point information to rawfile.
+
+****************************************
+DC Analysis `dc': V0:dc = (0 V -> 1.8 V)
+****************************************
+Important parameter values:
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    gmindc = 1 pS
+    dc: dc = 72 mV          (4 %), step = 36 mV           (2 %)
+    dc: dc = 108 mV         (6 %), step = 36 mV           (2 %)
+    dc: dc = 144 mV         (8 %), step = 36 mV           (2 %)
+    dc: dc = 180 mV        (10 %), step = 36 mV           (2 %)
+    dc: dc = 216 mV        (12 %), step = 36 mV           (2 %)
+    dc: dc = 252 mV        (14 %), step = 36 mV           (2 %)
+    dc: dc = 288 mV        (16 %), step = 36 mV           (2 %)
+    dc: dc = 324 mV        (18 %), step = 36 mV           (2 %)
+    dc: dc = 360 mV        (20 %), step = 36 mV           (2 %)
+    dc: dc = 396 mV        (22 %), step = 36 mV           (2 %)
+    dc: dc = 432 mV        (24 %), step = 36 mV           (2 %)
+    dc: dc = 468 mV        (26 %), step = 36 mV           (2 %)
+    dc: dc = 504 mV        (28 %), step = 36 mV           (2 %)
+    dc: dc = 540 mV        (30 %), step = 36 mV           (2 %)
+    dc: dc = 576 mV        (32 %), step = 36 mV           (2 %)
+    dc: dc = 612 mV        (34 %), step = 36 mV           (2 %)
+    dc: dc = 648 mV        (36 %), step = 36 mV           (2 %)
+    dc: dc = 684 mV        (38 %), step = 36 mV           (2 %)
+    dc: dc = 720 mV        (40 %), step = 36 mV           (2 %)
+    dc: dc = 756 mV        (42 %), step = 36 mV           (2 %)
+    dc: dc = 792 mV        (44 %), step = 36 mV           (2 %)
+    dc: dc = 828 mV        (46 %), step = 36 mV           (2 %)
+    dc: dc = 864 mV        (48 %), step = 36 mV           (2 %)
+    dc: dc = 900 mV        (50 %), step = 36 mV           (2 %)
+    dc: dc = 936 mV        (52 %), step = 36 mV           (2 %)
+    dc: dc = 972 mV        (54 %), step = 36 mV           (2 %)
+    dc: dc = 1.008 V       (56 %), step = 36 mV           (2 %)
+    dc: dc = 1.044 V       (58 %), step = 36 mV           (2 %)
+    dc: dc = 1.08 V        (60 %), step = 36 mV           (2 %)
+    dc: dc = 1.116 V       (62 %), step = 36 mV           (2 %)
+    dc: dc = 1.152 V       (64 %), step = 36 mV           (2 %)
+    dc: dc = 1.188 V       (66 %), step = 36 mV           (2 %)
+    dc: dc = 1.224 V       (68 %), step = 36 mV           (2 %)
+    dc: dc = 1.26 V        (70 %), step = 36 mV           (2 %)
+    dc: dc = 1.296 V       (72 %), step = 36 mV           (2 %)
+    dc: dc = 1.332 V       (74 %), step = 36 mV           (2 %)
+    dc: dc = 1.368 V       (76 %), step = 36 mV           (2 %)
+    dc: dc = 1.404 V       (78 %), step = 36 mV           (2 %)
+    dc: dc = 1.44 V        (80 %), step = 36 mV           (2 %)
+    dc: dc = 1.476 V       (82 %), step = 36 mV           (2 %)
+    dc: dc = 1.512 V       (84 %), step = 36 mV           (2 %)
+    dc: dc = 1.548 V       (86 %), step = 36 mV           (2 %)
+    dc: dc = 1.584 V       (88 %), step = 36 mV           (2 %)
+    dc: dc = 1.62 V        (90 %), step = 36 mV           (2 %)
+    dc: dc = 1.656 V       (92 %), step = 36 mV           (2 %)
+    dc: dc = 1.692 V       (94 %), step = 36 mV           (2 %)
+    dc: dc = 1.728 V       (96 %), step = 36 mV           (2 %)
+    dc: dc = 1.764 V       (98 %), step = 36 mV           (2 %)
+    dc: dc = 1.8 V        (100 %), step = 36 mV           (2 %)
+Total time required for dc analysis `dc': CPU = 45.993 ms, elapsed = 41.466 ms.
+Time accumulated: CPU = 1.21581 s, elapsed = 1.44064 s.
+Peak resident memory used = 37.8 Mbytes.
+
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+```
 
 
 
