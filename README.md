@@ -53,7 +53,7 @@ Vdc is 1.8 V To perform DC analysis we have to go to **Launch->ADE L->dc**,in dc
 
 
 
-VOH is measured at the minimum value of VIN(VOL) i.e 0, VOL is calculated at input voltage maximum value of VIN( VOH or VDD) i.e 1.8 V, VIH are calculated by finding points at VTC where derivative of VOUT wrt VIN = -1, the smaller value being VIL and higher being VIH, for them, we use the calculator functionality
+VOH is measured at the minimum value of VIN(VOL) i.e 0 V, VOL is calculated at input voltage maximum value of VIN( VOH or VDD) i.e 1.8 V, VIH are calculated by finding points at VTC where derivative of VOUT wrt VIN = -1, the smaller value being VIL and higher being VIH, for them, we use the calculator functionality
 of ADE L to plot **deriv(VS("/vout"))**.
 Calculation of VOH:
 
@@ -399,19 +399,19 @@ Calculation of VOH:
 
 ![Post_VOH_calculation](https://github.com/user-attachments/assets/5db78222-16a5-4d91-b004-6db6fd2047fe)
 
-From the figure above, VOH = 1.7982V.
+From the figure above, VOH = 1.7982 V.
 
 Calculation of VOL:
 
 ![Post_VOL_calculation](https://github.com/user-attachments/assets/b42ef26a-c4e9-45b4-b4e9-d52d75cb9dfd)
 
-From the figure above, VOL = 14.892uV.
+From the figure above, VOL = 14.892 uV.
 
 Calculation of VIL and VIH:
 
 ![Post_VIL_and_VIH_calculation](https://github.com/user-attachments/assets/3077d2b9-48bf-4556-85c6-fb90897be30a)
 
-It can be inferred that VIL = 398.944mV and VIH = 885.437mV from the figure above.
+It can be inferred that VIL = 398.944 mV and VIH = 885.437 mV from the figure above.
 
 Calculation of VTH:
 
@@ -421,9 +421,9 @@ VTH = 700mV as inferred from the figure above.
 
 ### Calculation of Noise Margins
 
-NML = VIL - VOL = 398.929mV
+NML = VIL - VOL = 398.929 mV
 
-NMH = VOH - VIH = 912.763mV
+NMH = VOH - VIH = 912.763 mV
 
 ## Post layout transient analysis
 
@@ -437,13 +437,13 @@ Calculation of Tplh:
 
 ![Postlayout_Tplh](https://github.com/user-attachments/assets/240f3c79-930e-4990-9ba6-0fe04a30ef66)
 
-From the figure above, Tplh = 311.228ps.
+From the figure above, Tplh = 311.228 ps.
 
 Calculation of Tphl:
 
 ![Postlayout_Tphl](https://github.com/user-attachments/assets/94e41c90-d049-4a45-8f24-42703038ca89)
 
-Tphl = 32.306ps, as inferred from the above figure.
+Tphl = 32.306 ps, as inferred from the above figure.
 
 Propagation delay, Tp = (Tplh + Tphl) / 2 = 171.767 ps.
 
