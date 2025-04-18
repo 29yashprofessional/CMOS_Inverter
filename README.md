@@ -1,4 +1,4 @@
-# CMOS_Inverter
+# CMOS Inverter
 This project aims at designing and analyzing a CMOS Inverter using GPDK90 90nm technology using Cadence Virtuoso and then comparing pre layout and post layout designs using Transient and DC analyses. It contains:
 - [Introduction](#introduction)
 - [Pre layout analysis](#pre-layout-analysis)
