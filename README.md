@@ -77,7 +77,7 @@ Calculation of VTH:
 
 ![VTH_calculation](https://github.com/user-attachments/assets/51206d9c-84cb-4061-aa5c-a8700ecabaa9)
 
-It can be noted that VTH = 0.7 V from the above figure.
+It can be noted that VTH = 700mV from the above figure.
 ### Calculation of Noise Margins
 NML = VIL - VOL = 388.255 mV
 
@@ -710,12 +710,11 @@ subckts: writing subcircuits to rawfile.
 
 |Parameter|Pre layout value|Post layout value|Difference|
 |---|---|---|---|
-|Propagation delay| | | |
-|Static Power Dissipation| | | | 
-|Dynamic Power Dissipation| | | |
-|Noise Margin Low| | | |
-|Noise Margin High| | | |
-|Threshold voltage| | | |
+|Propagation delay|167.08 ps |171.767 ps |4.687 ps |
+|Average Static Power Dissipation|243.005 nW|243.015 nW |10 pW | 
+|Average Dynamic Power Dissipation|86.80 uW|86.805 uW|5 nW|
+|Noise Margin Low|388.255 mV |398.929 mV |10.674 mV |
+|Noise Margin High|925.72 mV |912.763 mV | |
 
 
 
