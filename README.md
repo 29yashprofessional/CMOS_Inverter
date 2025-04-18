@@ -708,14 +708,15 @@ subckts: writing subcircuits to rawfile.
 
 # Pre layout v/s Post layout analysis report
 
-|Parameter|Pre layout value|Post layout value|Difference|
+|#Parameter|Pre layout value|Post layout value|Difference|
 |---|---|---|---|
 |Propagation delay|167.08 ps |171.767 ps |4.687 ps |
 |Average Static Power Dissipation|243.005 nW|243.015 nW |10 pW | 
 |Average Dynamic Power Dissipation|86.80 uW|86.805 uW|5 nW|
 |Noise Margin Low|388.255 mV |398.929 mV |10.674 mV |
-|Noise Margin High|925.72 mV |912.763 mV | |
+|Noise Margin High|925.72 mV |912.763 mV |12.957 mV |
 
+The differences observed between the pre-layout and post-layout analyses arise primarily due to the introduction of parasitic capacitances and resistances during the physical layout process. The pre-layout simulations consider ideal interconnections, while the post-layout simulations account for parasitics, routing effects and device placements. Due to these factors, slight increase in propagation delay and dynamic power dissipation takes place. Similarly, other factors like static power dissipation and noise margins shift marginally due to additional loading effects and variation in voltage levels.
 
 
 
