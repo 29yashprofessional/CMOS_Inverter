@@ -708,7 +708,7 @@ subckts: writing subcircuits to rawfile.
 
 # Pre layout v/s Post layout analysis report
 
-|#Parameter|Pre layout value|Post layout value|Difference|
+|Parameter|Pre layout value|Post layout value|Difference|
 |---|---|---|---|
 |Propagation delay|167.08 ps |171.767 ps |4.687 ps |
 |Average Static Power Dissipation|243.005 nW|243.015 nW |10 pW | 
